@@ -1,2 +1,17 @@
-# Employee-Salary-Prediction-Using-ANN
-AI-based Salary Prediction System built using Artificial Neural Networks (ANN). The model predicts employee salary based on education level, job role, and experience. Includes model training, preprocessing, and Streamlit web deployment.
+💰 Salary Prediction using Artificial Neural Network
+
+
+
+
+
+
+
+
+A Deep Learning based Salary Prediction System built using Artificial Neural Networks (ANN) and deployed with Streamlit.
+The model predicts the estimated salary of an employee based on their:
+
+🎓 Education Level
+
+💼 Job Title
+
+📅 Years of Experience
