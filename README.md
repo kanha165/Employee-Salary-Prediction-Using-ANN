@@ -39,3 +39,22 @@ Feature Scaling
 ANN Model
 ↓
 Salary Prediction
+
+
+
+---
+
+# 📊 Dataset
+
+The dataset contains employee salary information.
+
+| Feature | Description |
+|------|------|
+| Education Level | Bachelor's, Master's, PhD |
+| Job Title | Employee role |
+| Years of Experience | Experience in years |
+| Salary | Target variable |
+
+### Target Variable
+salary
+
