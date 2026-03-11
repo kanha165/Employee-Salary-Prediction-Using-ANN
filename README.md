@@ -58,3 +58,35 @@ The dataset contains employee salary information.
 ### Target Variable
 salary
 
+
+---
+
+# 🧠 Model Architecture
+
+The model uses a **Feedforward Artificial Neural Network (ANN)**.
+
+Input Layer
+↓
+Dense Layer (64 neurons, ReLU)
+↓
+Dense Layer (32 neurons, ReLU)
+↓
+Output Layer (1 neuron)
+
+### Model Implementation
+
+```python
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+model = Sequential()
+
+model.add(Dense(64, activation='relu', input_shape=(X_train.shape[1],)))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(1))
+
+model.compile(
+    optimizer='adam',
+    loss='mse',
+    metrics=['mae']
+)
