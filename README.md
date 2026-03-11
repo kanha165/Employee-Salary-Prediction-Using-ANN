@@ -51,4 +51,3 @@ Salary
 # 🧠 Model Architecture
 
 The model uses a **Feedforward Artificial Neural Network**.
-
