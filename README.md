@@ -90,3 +90,18 @@ model.compile(
     loss='mse',
     metrics=['mae']
 )
+
+⚙️ Data Preprocessing
+1️⃣ One Hot Encoding
+
+Categorical features such as Education Level and Job Title were converted into numerical format.
+
+Example:
+
+Education Level = Bachelor's
+
+becomes
+
+Education_Bachelor = 1
+Education_Master = 0
+Education_PhD = 0
