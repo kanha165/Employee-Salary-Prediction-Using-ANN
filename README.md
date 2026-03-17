@@ -5,59 +5,80 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-red)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A **Deep Learning based Salary Prediction System** built using **Artificial Neural Networks (ANN)** and deployed with **Streamlit**.
+A **Deep Learning-based Salary Prediction System** built using **Artificial Neural Networks (ANN)** and deployed with **Streamlit**.
 
 The model predicts the **salary of an employee** based on:
 
-- 🎓 Education Level
-- 💼 Job Title
-- 📅 Years of Experience
+* 🎓 Education Level
+* 💼 Job Title
+* 📅 Years of Experience
 
 ---
 
 # 🚀 Project Overview
 
-This project demonstrates a **complete Machine Learning pipeline**.
+This project demonstrates a **complete end-to-end Machine Learning pipeline**, from data preprocessing to deployment.
 
-### Steps in the Project
+### 🔄 Workflow
 
-1. Data Collection
-2. Data Preprocessing
-3. Feature Encoding
-4. Feature Scaling
-5. ANN Model Training
-6. Model Evaluation
-7. Web Application Deployment
-
-### Workflow
+```
 User Input
-↓
+   ↓
 Data Preprocessing
-↓
-Feature Scaling
-↓
+   ↓
+Feature Encoding & Scaling
+   ↓
 ANN Model
-↓
+   ↓
 Salary Prediction
-
-
+```
 
 ---
 
 # 📊 Dataset
 
-The dataset contains employee salary information.
+The dataset contains employee salary-related information.
 
-| Feature | Description |
-|------|------|
-| Education Level | Bachelor's, Master's, PhD |
-| Job Title | Employee role |
-| Years of Experience | Experience in years |
-| Salary | Target variable |
+| Feature             | Description               |
+| ------------------- | ------------------------- |
+| Education Level     | Bachelor's, Master's, PhD |
+| Job Title           | Employee role             |
+| Years of Experience | Experience in years       |
+| Salary              | Target variable           |
 
-### Target Variable
-salary
+### 🎯 Target Variable
 
+* `Salary`
+
+---
+
+# ⚙️ Data Preprocessing
+
+### 1️⃣ Handling Categorical Data (One Hot Encoding)
+
+Categorical features such as **Education Level** and **Job Title** are converted into numerical format.
+
+#### Example:
+
+```
+Education Level = Bachelor's
+```
+
+⬇️ Converted to:
+
+```
+Education_Bachelor = 1  
+Education_Master = 0  
+Education_PhD = 0  
+```
+
+---
+
+### 2️⃣ Feature Scaling
+
+* Applied **StandardScaler / MinMaxScaler**
+* Ensures all features are on the same scale
+* Improves model performance and convergence
 
 ---
 
@@ -65,15 +86,19 @@ salary
 
 The model uses a **Feedforward Artificial Neural Network (ANN)**.
 
+```
 Input Layer
-↓
+   ↓
 Dense Layer (64 neurons, ReLU)
-↓
+   ↓
 Dense Layer (32 neurons, ReLU)
-↓
+   ↓
 Output Layer (1 neuron)
+```
 
-### Model Implementation
+---
+
+# 🧪 Model Implementation
 
 ```python
 from tensorflow.keras.models import Sequential
@@ -90,18 +115,117 @@ model.compile(
     loss='mse',
     metrics=['mae']
 )
+```
 
-⚙️ Data Preprocessing
-1️⃣ One Hot Encoding
+---
 
-Categorical features such as Education Level and Job Title were converted into numerical format.
+# 📈 Model Evaluation
 
-Example:
+The model is evaluated using:
 
-Education Level = Bachelor's
+* 📉 **Mean Squared Error (MSE)** → Measures prediction error
+* 📊 **Mean Absolute Error (MAE)** → Average absolute difference
 
-becomes
+---
 
-Education_Bachelor = 1
-Education_Master = 0
-Education_PhD = 0
+# 🌐 Web Application (Streamlit)
+
+A user-friendly **Streamlit web app** is built for real-time predictions.
+
+### Features:
+
+* Interactive UI
+* User input form
+* Instant salary prediction
+* Lightweight deployment
+
+---
+
+# ▶️ How to Run the Project
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/salary-prediction-ann.git
+cd salary-prediction-ann
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Run the App
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📁 Project Structure
+
+```
+├── app.py
+├── model.pkl / model.h5
+├── scaler.pkl
+├── encoder.pkl
+├── dataset.csv
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 🔥 Key Highlights
+
+* ✅ End-to-End ML Pipeline
+* ✅ Deep Learning (ANN) Implementation
+* ✅ Feature Engineering & Scaling
+* ✅ Streamlit Deployment
+* ✅ Real-world Use Case
+
+---
+
+# 🚧 Future Improvements
+
+* 🔹 Add more features (Location, Skills, Company Size)
+* 🔹 Use advanced models (XGBoost, Random Forest)
+* 🔹 Improve accuracy with hyperparameter tuning
+* 🔹 Deploy using Docker / Cloud
+
+---
+
+# 📌 Use Cases
+
+* HR Salary Estimation
+* Job Market Analysis
+* Career Guidance Tools
+
+---
+
+# 👨‍💻 Author
+
+**Kanha Patidar**
+
+* 💼 LinkedIn: (Add your link)
+* 💻 GitHub: (Add your link)
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# ⭐ Support
+
+If you like this project:
+
+* ⭐ Star this repository
+* 🔁 Share it on LinkedIn
+* 💬 Give feedback
+
+---
